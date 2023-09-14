@@ -1,0 +1,34 @@
+// first navbar
+
+@media (max-width: 991px) {
+  nav.first-navbar {
+    div.navbar-collapse > div.container-buttons {
+      margin: 1rem 0;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  nav.first-navbar {
+    div.navbar-collapse {
+      justify-content: flex-end;
+      position: relative;
+
+      > form.d-flex {
+        position: absolute;
+        right: 50%;
+      }
+
+      > div.container-buttons {
+        > a.d-none.d-lg-inline-block {
+          margin: 0 5px;
+        }
+        > a.d-none.d-lg-inline-block.like {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+
+// second navbar

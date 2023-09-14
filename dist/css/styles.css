@@ -1,4 +1,25 @@
 @charset "UTF-8";
+@media (max-width: 991px) {
+  nav.first-navbar div.navbar-collapse > div.container-buttons {
+    margin: 1rem 0;
+  }
+}
+@media (min-width: 992px) {
+  nav.first-navbar div.navbar-collapse {
+    justify-content: flex-end;
+    position: relative;
+  }
+  nav.first-navbar div.navbar-collapse > form.d-flex {
+    position: absolute;
+    right: 50%;
+  }
+  nav.first-navbar div.navbar-collapse > div.container-buttons > a.d-none.d-lg-inline-block {
+    margin: 0 5px;
+  }
+  nav.first-navbar div.navbar-collapse > div.container-buttons > a.d-none.d-lg-inline-block.like {
+    margin-right: 10px;
+  }
+}
 /*!
  * Bootstrap  v5.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2023 The Bootstrap Authors
