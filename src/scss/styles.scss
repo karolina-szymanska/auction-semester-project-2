@@ -1,8 +1,9 @@
-// @import "_variables.scss";
+@import "_variables.scss";
+@import "_navbar.scss";
 
 // custom variables
-$primary: #f63062;
-$secondary: #16af7f;
+$primary: $colour-primary;
+$secondary: $colour-secondary;
 
 // import bootstrap
 @import "../../node_modules/bootstrap/scss/bootstrap";
