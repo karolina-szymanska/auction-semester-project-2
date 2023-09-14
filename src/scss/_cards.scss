@@ -12,10 +12,12 @@ div.card {
     border-bottom: 1px solid rgba(0, 0, 0, 0.175);
   }
 
-  div.card-body {
-    > h5.card-title {
-      color: $colour-primary;
-      font-size: 1.15rem;
-    }
+  div.card-body > h5.card-title {
+    color: $colour-primary;
+    font-size: 1.15rem;
+  }
+
+  @media (max-width: 991px) {
+    margin-bottom: 0.9rem;
   }
 }
