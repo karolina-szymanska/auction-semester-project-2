@@ -32,3 +32,19 @@
 }
 
 // second navbar
+
+@media (min-width: 992px) {
+  nav.second-navbar {
+    ul.navbar-nav {
+      width: 100%;
+      justify-content: space-between;
+      margin: 0 !important;
+
+      > li.nav-item > a.nav-link {
+        text-transform: uppercase;
+        color: $colour-white;
+        font-weight: 500;
+      }
+    }
+  }
+}
