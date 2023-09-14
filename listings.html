@@ -4,168 +4,178 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Auctions - All Our Auctions" />
+    <meta
+      name="description"
+      content="Auctions - All our auctions at your fingertips"
+    />
     <title>Auction | Auctions</title>
     <link rel="stylesheet" href="dist/css/styles.css" />
   </head>
   <body>
-    <header>
-      <!-- NAVIGATION -->
+    <div class="wrapper">
+      <header>
+        <!-- NAVIGATION -->
 
-      <!--First navbar-->
+        <!--First navbar-->
 
-      <nav
-        class="navbar bg-light sticky-top navbar-expand-lg"
-        data-bs-theme="light"
-      >
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">
-            <img src="./assets/logo/logo.png" alt="Auction logo" height="50" />
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="auctions.html">Auctions</a>
-              </li>
-              <li class="nav-item d-lg-none">
-                <a class="nav-link active" aria-current="page" href="index.html"
-                  >Home</a
-                >
-              </li>
-              <li class="nav-item d-none d-lg-inline-block">
-                <a class="nav-link active" aria-current="page" href="index.html"
+        <nav
+          class="first-navbar navbar navbar-expand-lg bg-light sticky-top"
+          data-bs-theme="light"
+        >
+          <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+              <img
+                src="./assets/logo/logo.png"
+                alt="Auction logo"
+                height="50"
+              />
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-lg-none">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="index.html"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="listings.html">Auctions</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="profile.html">Profile</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Categories
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Art</a></li>
+                    <li><a class="dropdown-item" href="#">Books</a></li>
+                    <li><a class="dropdown-item" href="#">Collectibles</a></li>
+                    <li><a class="dropdown-item" href="#">Fashion</a></li>
+                    <li><a class="dropdown-item" href="#">Interiors</a></li>
+                    <li><a class="dropdown-item" href="#">Jewellery</a></li>
+                    <li><a class="dropdown-item" href="#">Wine & Whisky</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <form class="d-flex" role="search">
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Search item"
+                  aria-label="Search"
+                />
+                <button class="btn btn-outline-success" type="submit">
+                  Search
+                </button>
+              </form>
+
+              <div class="container-buttons">
+                <a
+                  class="d-none d-lg-inline-block"
+                  aria-current="page"
+                  href="index.html"
                   ><img src="assets/icons/header/home.png" height="20"
                 /></a>
-              </li>
-              <li class="nav-item d-lg-none">
-                <a class="nav-link" href="profile.html">Profile</a>
-              </li>
-              <li class="nav-item d-none d-lg-inline-block">
-                <a class="nav-link" aria-current="page" href="index.html"
+
+                <a
+                  class="d-none d-lg-inline-block"
+                  aria-current="page"
+                  href="index.html"
                   ><img src="assets/icons/header/user.png" height="20"
                 /></a>
-              </li>
 
-              <li class="nav-item">
-                <div class="input-group">
-                  <span class="input-group-text" id="basic-addon1"
-                    ><img src="assets/icons/header/search.png" height="15"
-                  /></span>
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Search item"
-                    aria-label="Search"
-                    aria-describedby="basic-addon1"
-                  />
-                </div>
-              </li>
-
-              <li class="nav-item dropdown d-lg-none">
                 <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Categories
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Art</a></li>
-                  <li><a class="dropdown-item" href="#">Books</a></li>
-                  <li><a class="dropdown-item" href="#">Collectibles</a></li>
-                  <li><a class="dropdown-item" href="#">Fashion</a></li>
-                  <li><a class="dropdown-item" href="#">Interiors</a></li>
-                  <li><a class="dropdown-item" href="#">Jewellery</a></li>
-                  <li><a class="dropdown-item" href="#">Wine & Whisky</a></li>
-                </ul>
+                  class="d-none d-lg-inline-block like"
+                  aria-current="page"
+                  href="index.html"
+                  ><img src="assets/icons/header/like.png" height="20"
+                /></a>
+
+                <button type="button" class="btn btn-outline-primary">
+                  Sell item
+                </button>
+                <button type="button" class="btn btn-outline-primary">
+                  Log in
+                </button>
+                <button type="button" class="btn btn-primary">Register</button>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        <!--Second navbar-->
+
+        <nav
+          class="second-navbar navbar navbar-expand-lg bg-dark d-none d-lg-block"
+          data-bs-theme="dark"
+        >
+          <div class="container-fluid">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="listings.html">auctions</a>
               </li>
               <li class="nav-item">
-                <div class="d-flex align-self-end container-buttons">
-                  <button type="button" class="btn btn-outline-primary">
-                    Sell item
-                  </button>
-                  <button type="button" class="btn btn-outline-primary">
-                    Log in
-                  </button>
-                  <button type="button" class="btn btn-primary">
-                    Register
-                  </button>
-                </div>
+                <a class="nav-link" href="#">art</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">books</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">collectibles</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">fashion</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">interiors</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">jewellery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">wine & whisky</a>
               </li>
             </ul>
           </div>
-        </div>
-      </nav>
+        </nav>
+      </header>
 
-      <!--Second navbar-->
+      <main>
+        <!-- ALL AUCTIONS SECTION -->
 
-      <nav
-        class="navbar bg-dark navbar-expand-lg d-none d-lg-block"
-        data-bs-theme="dark"
-      >
-        <div class="container-fluid">
-          <div id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">ART</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">BOOKS</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">COLLECTIBLES</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">FASHION</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">INTERIORS</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">JEWELLERY</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">WINE & WHISKY</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
-    <main>
-      <h1 style="display: none">auctions</h1>
-
-      <!-- OUR AUCTIONS SECTION -->
-      <div class="container-our-auctions-background">
-        <div class="container">
-          <div class="row">
-            <div class="col text-center">
-              <h2
-                class="section-heading"
-                style="text-decoration: underline solid 4px #f63062"
-              >
-                our auctions
-              </h2>
-              <div class="container-our-auctions">
-                <div class="row">
-                  <div class="col-12 col-md-6 col-lg-3">
-                    <a href="listing.html">
+        <div class="container-all-auctions-background pt-5 pb-5">
+          <div class="container">
+            <div class="row">
+              <div class="col text-center">
+                <h1 style="display: none">all auctions</h1>
+                <h2 class="section-heading">all auctions</h2>
+                <div class="container-latest-auctions mb-3">
+                  <div class="row">
+                    <div class="col-12 col-md-6 col-lg-3">
                       <div class="card">
-                        <div class="card-header">Time remaining: 2 days</div>
-                        <div class="ratio ratio-16x9">
+                        <div class="card-header">Offer number: 123456</div>
+                        <div class="ratio ratio-4x3">
                           <img
                             src="assets/latest /painting.jpg"
                             class="card-img-center"
@@ -174,75 +184,124 @@
                         </div>
                         <Ratio className="ratio-card-body" aspectRatio="21x9">
                           <div class="card-body">
-                            <h4 class="card-title">Mysterious Woman</h4>
-                            <h5 class="card-text">500.00 €</h5>
-                            <p class="card-text">3 bids</p>
-                            <a
-                              href="./listing.html"
-                              class="btn btn-primary btn-sm"
-                              style="display: none"
-                              >place bid</a
-                            >
+                            <h5 class="card-title">Mysterious Woman</h5>
+                            <p class="card-text">500.00 €</p>
                           </div>
                         </Ratio>
                       </div>
-                    </a>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                      <div class="card">
+                        <div class="card-header">Offer number: 234567</div>
+                        <div class="ratio ratio-4x3">
+                          <img
+                            src="assets/latest /bag.jpg"
+                            class="card-img-center"
+                            alt="Chanel bag 2.55"
+                          />
+                        </div>
+                        <Ratio className="ratio-card-body" aspectRatio="21x9">
+                          <div class="card-body">
+                            <h5 class="card-title">Chanel bag 2.55</h5>
+                            <p class="card-text">1000.25 €</p>
+                          </div>
+                        </Ratio>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                      <div class="card">
+                        <div class="card-header">Offer number: 345678</div>
+                        <div class="ratio ratio-4x3">
+                          <img
+                            src="assets/latest /sculpture.jpg"
+                            class="card-img-center"
+                            alt="Poseidon marble sculpture"
+                          />
+                        </div>
+                        <Ratio className="ratio-card-body" aspectRatio="21x9">
+                          <div class="card-body">
+                            <h5 class="card-title">Poseidon sculpture</h5>
+                            <p class="card-text">4000.00 €</p>
+                          </div>
+                        </Ratio>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                      <div class="card">
+                        <div class="card-header">Offer number: 456789</div>
+                        <div class="ratio ratio-4x3">
+                          <img
+                            src="assets/latest /lamp.jpg"
+                            class="card-img-center"
+                            alt="Glamour golden-black lamp"
+                          />
+                        </div>
+                        <Ratio className="ratio-card-body" aspectRatio="21x9">
+                          <div class="card-body">
+                            <h5 class="card-title">Glamour lamp</h5>
+                            <p class="card-text">750.00 €</p>
+                          </div>
+                        </Ratio>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- ICONIC BRANDS SECTION -->
-      <div class="container-brands-background">
-        <div class="container">
-          <div class="row">
-            <div class="col text-center">
-              <h2
-                class="section-heading"
-                style="text-decoration: underline solid 4px #f63062"
-              >
-                iconic brands
-              </h2>
-              <div class="container-brands">
-                <div class="d-flex justify-content-between container-brands1">
-                  <img src="assets/brands/lego.png" style="height: 40px" />
-                  <img src="assets/brands/chanel.png" style="height: 40px" />
-                  <img src="assets/brands/pokemon.png" style="height: 40px" />
-                  <img src="assets/brands/louboutin.png" style="height: 40px" />
-                  <img
-                    src="assets/brands/louis vuitton.png"
-                    style="height: 40px"
-                  />
-                </div>
-                <div class="d-flex justify-content-between container-brands2">
-                  <img src="assets/brands/hermes.png" style="height: 40px" />
-                  <img src="assets/brands/nikon.png" style="height: 40px" />
-                  <img src="assets/brands/porsche.png" style="height: 40px" />
-                  <img src="assets/brands/rolex.png" style="height: 40px" />
-                  <img src="assets/brands/tiffany.png" style="height: 40px" />
+        <!-- ICONIC BRANDS SECTION -->
+        <div class="container-brands-background pt-5 pb-5">
+          <div class="container">
+            <div class="row">
+              <div class="col text-center">
+                <h2 class="section-heading">iconic brands</h2>
+                <div class="container-brands">
+                  <div
+                    class="brands-1 d-flex justify-content-between container-brands1 pb-4"
+                  >
+                    <img src="assets/brands/lego.png" style="height: 40px" />
+                    <img src="assets/brands/chanel.png" style="height: 40px" />
+                    <img src="assets/brands/pokemon.png" style="height: 40px" />
+                    <img
+                      src="assets/brands/louboutin.png"
+                      style="height: 40px"
+                    />
+                    <img
+                      src="assets/brands/louis vuitton.png"
+                      style="height: 40px"
+                    />
+                  </div>
+                  <div
+                    class="brands-2 d-flex justify-content-between container-brands2"
+                  >
+                    <img src="assets/brands/hermes.png" style="height: 40px" />
+                    <img src="assets/brands/nikon.png" style="height: 40px" />
+                    <img src="assets/brands/porsche.png" style="height: 40px" />
+                    <img src="assets/brands/rolex.png" style="height: 40px" />
+                    <img src="assets/brands/tiffany.png" style="height: 40px" />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </main>
+      </main>
+    </div>
 
-    <footer style="color: #f5f5f5">
+    <footer>
       <!-- FOOTER 1 -->
-      <div
-        class="container-footer1-background"
-        style="background-color: #4e4f53"
-      >
+      <div class="container-footer1-background pt-3 pb-3">
         <div class="container">
           <div class="row">
             <div class="col-12 col-lg-6">
               <div class="row">
                 <div class="col">
-                  <p className="p-heading">Auction</p>
+                  <p class="p-heading">Auction</p>
                   <p>About Auction</p>
                   <p>Help</p>
                   <p>Careers</p>
@@ -250,7 +309,7 @@
                   <p>Our blog</p>
                 </div>
                 <div class="col">
-                  <p className="p-heading">Buying with Auction</p>
+                  <p class="p-heading">Buying with Auction</p>
                   <p>Placing your bid</p>
                   <p>Experts</p>
                   <p>Fair business practice</p>
@@ -258,7 +317,7 @@
                   <p>Buyer terms</p>
                 </div>
                 <div class="col">
-                  <p className="p-heading">Selling with Auction</p>
+                  <p class="p-heading">Selling with Auction</p>
                   <p>Selling at Auction</p>
                   <p>Photo tips</p>
                   <p>Seller terms</p>
@@ -267,7 +326,7 @@
               </div>
             </div>
             <div class="col-12 col-lg-6">
-              <div className="limited-length">
+              <div class="limited-length">
                 <a href="index.html">
                   <img
                     src="assets/logo/logo-white.png"
@@ -287,10 +346,7 @@
       </div>
 
       <!-- FOOTER 2 -->
-      <div
-        class="container-footer2-background"
-        style="background-color: #2a292e"
-      >
+      <div class="container-footer2-background pt-2 pb-2">
         <div class="container">
           <div class="row">
             <div class="col-12 col-lg-6">
@@ -340,18 +396,11 @@
               </div>
             </div>
             <div class="col-12 col-lg-6">
-              <p className="p-heading">
-                © 2000-2023 Auction. All rights reserved.
-              </p>
+              <p class="p-heading">© 2000-2023 Auction. All rights reserved.</p>
             </div>
           </div>
         </div>
       </div>
     </footer>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-      crossorigin="anonymous"
-    ></script>
   </body>
 </html>
