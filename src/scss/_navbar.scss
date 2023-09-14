@@ -1,5 +1,11 @@
 // first navbar
 
+nav.first-navbar {
+  div.container-buttons > button.btn-primary {
+    color: $colour-white;
+  }
+}
+
 @media (max-width: 991px) {
   nav.first-navbar {
     div.navbar-collapse > div.container-buttons {
