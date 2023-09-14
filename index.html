@@ -152,21 +152,112 @@
 
     <main>
       <!-- JUMBOTRON -->
-      <div
-        class="jumbotron"
-        style="background-image: url(assets/banner.jpg); height: 500px"
-      >
-        <div class="container text-center">
+      <div class="jumbotron d-flex">
+        <div class="jumbotron-text text-center">
           <h1 class="jumbotron-h1">best online auctions</h1>
-          <p class="jumbotron-p">
+          <h3 class="jumbotron-h3">
             We help
-            <span class="jumbotron-p-span" style="color: #16af7f"
+            <span class="jumbotron-h3-span" style="color: #16af7f"
               >sell and buy</span
             >
-          </p>
+          </h3>
           <a href="./listings.html" class="btn btn-primary btn-lg"
             >see auctions</a
           >
+        </div>
+      </div>
+
+      <!-- LATEST AUCTIONS SECTION -->
+      <div class="container-latest-auctions-background pt-5 pb-5">
+        <div class="container">
+          <div class="row">
+            <div class="col text-center">
+              <h2 class="section-heading">latest auctions</h2>
+              <div class="container-latest-auctions">
+                <div class="row">
+                  <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card">
+                      <div class="card-header">Offer number: 123456</div>
+                      <div class="ratio ratio-4x3">
+                        <img
+                          src="assets/latest /painting.jpg"
+                          class="card-img-center"
+                          alt="Impressionist painting Mysterious Woman"
+                        />
+                      </div>
+                      <Ratio className="ratio-card-body" aspectRatio="21x9">
+                        <div class="card-body">
+                          <h5 class="card-title">Mysterious Woman</h5>
+                          <p class="card-text">500.00 €</p>
+                        </div>
+                      </Ratio>
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card">
+                      <div class="card-header">Offer number: 234567</div>
+                      <div class="ratio ratio-4x3">
+                        <img
+                          src="assets/latest /bag.jpg"
+                          class="card-img-center"
+                          alt="Chanel bag 2.55"
+                        />
+                      </div>
+                      <Ratio className="ratio-card-body" aspectRatio="21x9">
+                        <div class="card-body">
+                          <h5 class="card-title">Chanel bag 2.55</h5>
+                          <p class="card-text">1000.25 €</p>
+                        </div>
+                      </Ratio>
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card">
+                      <div class="card-header">Offer number: 345678</div>
+                      <div class="ratio ratio-4x3">
+                        <img
+                          src="assets/latest /sculpture.jpg"
+                          class="card-img-center"
+                          alt="Poseidon marble sculpture"
+                        />
+                      </div>
+                      <Ratio className="ratio-card-body" aspectRatio="21x9">
+                        <div class="card-body">
+                          <h5 class="card-title">Poseidon sculpture</h5>
+                          <p class="card-text">4000.00 €</p>
+                        </div>
+                      </Ratio>
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card">
+                      <div class="card-header">Offer number: 456789</div>
+                      <div class="ratio ratio-4x3">
+                        <img
+                          src="assets/latest /lamp.jpg"
+                          class="card-img-center"
+                          alt="Glamour golden-black lamp"
+                        />
+                      </div>
+                      <Ratio className="ratio-card-body" aspectRatio="21x9">
+                        <div class="card-body">
+                          <h5 class="card-title">Glamour lamp</h5>
+                          <p class="card-text">750.00 €</p>
+                        </div>
+                      </Ratio>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <a href="./listings.html" class="btn btn-primary btn-lg"
+                >see all auctions</a
+              >
+            </div>
+          </div>
         </div>
       </div>
 
@@ -175,12 +266,7 @@
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-12 col-md-6 text-center">
-              <h2
-                class="section-heading"
-                style="text-decoration: underline solid 4px #f63062"
-              >
-                our experts
-              </h2>
+              <h2 class="section-heading">our experts</h2>
               <div id="carouselExampleCaptions" class="carousel slide">
                 <div class="carousel-inner">
                   <div class="carousel-item active">
@@ -269,116 +355,12 @@
         </div>
       </div>
 
-      <!-- LATEST AUCTIONS SECTION -->
-      <div class="container-latest-auctions-background">
-        <div class="container">
-          <div class="row">
-            <div class="col text-center">
-              <h2
-                class="section-heading"
-                style="text-decoration: underline solid 4px #f63062"
-              >
-                latest auctions
-              </h2>
-              <div class="container-latest-auctions">
-                <div class="row">
-                  <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card">
-                      <div class="card-header">Offer number: 123456</div>
-                      <div class="ratio ratio-16x9">
-                        <img
-                          src="assets/latest /painting.jpg"
-                          class="card-img-center"
-                          alt="Impressionist painting Mysterious Woman"
-                        />
-                      </div>
-                      <Ratio className="ratio-card-body" aspectRatio="21x9">
-                        <div class="card-body">
-                          <h5 class="card-title">Mysterious Woman</h5>
-                          <p class="card-text">500.00 €</p>
-                        </div>
-                      </Ratio>
-                    </div>
-                  </div>
-
-                  <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card">
-                      <div class="card-header">Offer number: 234567</div>
-                      <div class="ratio ratio-16x9">
-                        <img
-                          src="assets/latest /bag.jpg"
-                          class="card-img-center"
-                          alt="Chanel bag 2.55"
-                        />
-                      </div>
-                      <Ratio className="ratio-card-body" aspectRatio="21x9">
-                        <div class="card-body">
-                          <h5 class="card-title">Chanel bag 2.55</h5>
-                          <p class="card-text">1000.25 €</p>
-                        </div>
-                      </Ratio>
-                    </div>
-                  </div>
-
-                  <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card">
-                      <div class="card-header">Offer number: 345678</div>
-                      <div class="ratio ratio-16x9">
-                        <img
-                          src="assets/latest /sculpture.jpg"
-                          class="card-img-center"
-                          alt="Poseidon marble sculpture"
-                        />
-                      </div>
-                      <Ratio className="ratio-card-body" aspectRatio="21x9">
-                        <div class="card-body">
-                          <h5 class="card-title">Poseidon sculpture</h5>
-                          <p class="card-text">4000.00 €</p>
-                        </div>
-                      </Ratio>
-                    </div>
-                  </div>
-
-                  <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card">
-                      <div class="card-header">Offer number: 456789</div>
-                      <div class="ratio ratio-16x9">
-                        <img
-                          src="assets/latest /lamp.jpg"
-                          class="card-img-center"
-                          alt="Glamour golden-black lamp"
-                        />
-                      </div>
-                      <Ratio className="ratio-card-body" aspectRatio="21x9">
-                        <div class="card-body">
-                          <h5 class="card-title">Glamour lamp</h5>
-                          <p class="card-text">750.00 €</p>
-                        </div>
-                      </Ratio>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <a href="./listings.html" class="btn btn-primary btn-lg"
-                >see all auctions</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-
       <!-- HOW IT WORKS SECTION -->
-      <div class="container-how-it-works-background">
+      <div class="container-how-it-works-background pt-5 pb-5">
         <div class="container">
           <div class="row">
             <div class="col text-center">
-              <h2
-                class="section-heading"
-                style="text-decoration: underline solid 4px #f63062"
-              >
-                how it works
-              </h2>
+              <h2 class="section-heading">how it works</h2>
 
               <div class="container-instructions">
                 <div class="row">
@@ -387,12 +369,7 @@
                       <div class="circle">
                         <h3>01</h3>
                       </div>
-                      <h3
-                        class="instruction-heading"
-                        style="text-decoration: underline solid 2px #f63062"
-                      >
-                        Register
-                      </h3>
+                      <h3 class="instruction-heading">Register</h3>
                       <p>Lorem ipsum dolor sit amet</p>
                     </div>
                   </div>
@@ -402,12 +379,7 @@
                       <div class="circle">
                         <h3>02</h3>
                       </div>
-                      <h3
-                        class="instruction-heading"
-                        style="text-decoration: underline solid 2px #f63062"
-                      >
-                        Log In
-                      </h3>
+                      <h3 class="instruction-heading">Log In</h3>
                       <p>Sed do eiusmod tempor incididunt</p>
                     </div>
                   </div>
@@ -417,12 +389,7 @@
                       <div class="circle">
                         <h3>03</h3>
                       </div>
-                      <h3
-                        class="instruction-heading"
-                        style="text-decoration: underline solid 2px #f63062"
-                      >
-                        Bid
-                      </h3>
+                      <h3 class="instruction-heading">Bid</h3>
                       <p>Labore et dolore magna aliqua</p>
                     </div>
                   </div>
@@ -432,12 +399,7 @@
                       <div class="circle">
                         <h3>04</h3>
                       </div>
-                      <h3
-                        class="instruction-heading"
-                        style="text-decoration: underline solid 2px #f63062"
-                      >
-                        You win
-                      </h3>
+                      <h3 class="instruction-heading">You win</h3>
                       <p>Ut enim ad minim veniam</p>
                     </div>
                   </div>
@@ -449,16 +411,11 @@
       </div>
 
       <!-- ICONIC BRANDS SECTION -->
-      <div class="container-brands-background">
+      <div class="container-brands-background pb-5">
         <div class="container">
           <div class="row">
             <div class="col text-center">
-              <h2
-                class="section-heading"
-                style="text-decoration: underline solid 4px #f63062"
-              >
-                iconic brands
-              </h2>
+              <h2 class="section-heading">iconic brands</h2>
               <div class="container-brands">
                 <div class="d-flex justify-content-between container-brands1">
                   <img src="assets/brands/lego.png" style="height: 40px" />
@@ -487,7 +444,7 @@
     <footer style="color: #f5f5f5">
       <!-- FOOTER 1 -->
       <div
-        class="container-footer1-background"
+        class="container-footer1-background pt-3 pb-3"
         style="background-color: #4e4f53"
       >
         <div class="container">
@@ -541,7 +498,7 @@
 
       <!-- FOOTER 2 -->
       <div
-        class="container-footer2-background"
+        class="container-footer2-background pt-1 pb-1"
         style="background-color: #2a292e"
       >
         <div class="container">
