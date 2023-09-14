@@ -1,0 +1,18 @@
+div.card {
+  > div.card-header {
+    background-color: $colour-secondary;
+    color: $colour-white;
+  }
+
+  img.card-img-center {
+    object-fit: cover;
+    object-position: center;
+  }
+
+  div.card-body {
+    > h5.card-title {
+      color: $colour-primary;
+      font-size: 1.15rem;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+h1,
+h2 {
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 1.25rem !important;
+}
+
+h2.section-heading {
+  text-decoration: underline solid 3px $colour-primary;
+}
+
+h3.instruction-heading {
+  text-decoration: underline solid 2px $colour-primary;
+}
