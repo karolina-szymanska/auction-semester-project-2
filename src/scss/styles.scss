@@ -1,8 +1,13 @@
 @import "_variables.scss";
 @import "_typography.scss";
+@import "_ui.scss";
+@import "_layout.scss";
 @import "_navbar.scss";
 @import "_jumbotron.scss";
 @import "_cards.scss";
+@import "_carousel.scss";
+@import "_instructions.scss";
+@import "_footer.scss";
 
 // custom variables
 $primary: $colour-primary;

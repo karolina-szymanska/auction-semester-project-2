@@ -1,0 +1,36 @@
+footer {
+  font-size: 14px;
+  color: $colour-white;
+
+  p.p-heading {
+    font-weight: 700;
+  }
+}
+
+// foter1
+
+div.container-footer1-background {
+  background-color: $colour-grey-dark;
+
+  @media (min-width: 1200px) {
+    div.limited-length {
+      max-width: 85%;
+    }
+  }
+}
+
+// footer2
+
+div.container-footer2-background {
+  background-color: $colour-text;
+
+  div.container-footer2-icons {
+    a > img {
+      margin-right: 10px;
+    }
+  }
+
+  p.p-heading {
+    margin-bottom: 0;
+  }
+}

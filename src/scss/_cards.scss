@@ -2,11 +2,14 @@ div.card {
   > div.card-header {
     background-color: $colour-secondary;
     color: $colour-white;
+    border-bottom: none;
   }
 
   img.card-img-center {
     object-fit: cover;
     object-position: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.175);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.175);
   }
 
   div.card-body {
