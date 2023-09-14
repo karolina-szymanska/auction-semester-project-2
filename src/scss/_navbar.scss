@@ -1,8 +1,10 @@
 // first navbar
 
 nav.first-navbar {
-  div.container-buttons > button.btn-primary {
-    color: $colour-white;
+  div.container-buttons {
+    > button.btn-primary {
+      color: $colour-white;
+    }
   }
 }
 
@@ -31,6 +33,9 @@ nav.first-navbar {
         }
         > a.d-none.d-lg-inline-block.like {
           margin-right: 10px;
+        }
+        > button.btn {
+          margin-left: 7px;
         }
       }
     }
