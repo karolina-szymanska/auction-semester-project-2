@@ -1,17 +1,3 @@
-html,
-body {
-  height: 100%;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-}
-
-div.wrapper {
-  flex: 1 0 auto;
-}
-
 div.container-latest-auctions-background,
 div.container-how-it-works-background,
 div.container-all-auctions-background {
