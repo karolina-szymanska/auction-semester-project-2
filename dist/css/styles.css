@@ -172,6 +172,10 @@ div.instruction > h3.instruction-heading, div.instruction > .instruction-heading
   margin-top: 1rem;
   margin-bottom: 0.5rem;
 }
+div.instruction p {
+  font-style: italic;
+  width: 150px;
+}
 
 div.container-footer1-background,
 div.container-footer2-background {
