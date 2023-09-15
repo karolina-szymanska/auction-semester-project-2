@@ -23,6 +23,12 @@ a.customised-btn {
   padding: 0.2rem 0.8rem 0.2rem 0.8rem;
 }
 
+div.spinner-border {
+  width: 7rem;
+  height: 7rem;
+  color: #f63062;
+}
+
 html,
 body {
   height: 100%;
