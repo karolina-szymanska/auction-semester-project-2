@@ -1,6 +1,11 @@
 // first navbar
 
 nav.first-navbar {
+  input.form-control:focus {
+    border-color: $colour-secondary;
+    box-shadow: 0 0 0 0.25rem rgba(22, 175, 127, 0.25);
+  }
+
   button.btn-outline-success:hover {
     color: $colour-white;
   }
