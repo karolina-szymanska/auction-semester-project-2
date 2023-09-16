@@ -160,11 +160,6 @@ div.card div.card-body > h5.card-title, div.card div.card-body > .card-title.h5 
   color: #f63062;
   font-size: 1.15rem;
 }
-@media (max-width: 991px) {
-  div.card {
-    margin-bottom: 0.9rem;
-  }
-}
 
 div.carousel-inner div.carousel-caption {
   background-color: #2a292e;
