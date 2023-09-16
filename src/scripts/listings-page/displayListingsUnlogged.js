@@ -10,21 +10,39 @@ async function displayListingsUnlogged(url) {
     const results = await response.json();
     console.log(results);
 
-    for (let i = 0; i < results; i++) {
+    results.forEach(function (result) {
       listingsContainer.innerHTML += `
         <div class="col-12 col-md-6 col-lg-3">
-            <div class="card">
-                <div class="card-header">Offer number: 123456</div>
+            <div class="card mb-5">
+                <div class="card-header">id: ${result.id}</div>
                 <div class="ratio ratio-4x3">
-                    <img src="${results[i].media[0]}" class="card-img-center" alt="${results[i].title}"/>
+                    <img src="${result.media[0]}" class="card-img-center" alt="${result.title}"/>
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title">${results[i].title}</h5>
-                    <p class="card-text">Bids: ${results[i].bids.length}</p>
+                    <h5 class="card-title">${result.title}</h5>
+                    <p class="card-text">Bids: ${result._count.bids}</p>
                 </div>
             </div>
         </div>`;
-    }
+    });
+
+    // refreshing loops for myself as I didn´t remember forEach :)
+
+    // for (let i = 0; i < results.length; i++) {
+    //   listingsContainer.innerHTML += `
+    //     <div class="col-12 col-md-6 col-lg-3">
+    //         <div class="card mb-3">
+    //             <div class="card-header">id: ${results[i].id}</div>
+    //             <div class="ratio ratio-4x3">
+    //                 <img src="${results[i].media[0]}" class="card-img-center" alt="${results[i].title}"/>
+    //             </div>
+    //             <div class="card-body">
+    //                 <h5 class="card-title">${results[i].title}</h5>
+    //                 <p class="card-text">Bids: ${results[i]._count.bids}</p>
+    //             </div>
+    //         </div>
+    //     </div>`;
+    // }
 
     // if(results[i].media.length ===0) {
     //     results[i].media = ["/assets/placeholders/placeholder.jpg"];
