@@ -1,16 +1,22 @@
 import { allActiveListingsDesc } from "../api/api-urls.js";
-import setLoader from "../components/loader.js";
 const listingsContainer = document.querySelector("#listings-container");
 
 async function displayListingsUnlogged(url) {
-  listingsContainer.innerHTML = setLoader();
-
+  listingsContainer.innerHTML = "";
   try {
     const response = await fetch(url);
     const results = await response.json();
     console.log(results);
 
     results.forEach(function (result) {
+      if (result.media.length === 0) {
+        result.media = ["/assets/placeholders/placeholder.jpg"];
+      }
+
+      if (!result.title) {
+        result.title = "Wonderful item";
+      }
+
       listingsContainer.innerHTML += `
         <div class="col-12 col-md-6 col-lg-3">
             <div class="card mb-5">
