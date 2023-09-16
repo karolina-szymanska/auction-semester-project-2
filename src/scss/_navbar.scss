@@ -1,6 +1,10 @@
 // first navbar
 
 nav.first-navbar {
+  button.btn-outline-success:hover {
+    color: $colour-white;
+  }
+
   div.container-buttons {
     > button.btn-primary {
       color: $colour-white;
