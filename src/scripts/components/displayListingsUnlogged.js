@@ -16,6 +16,7 @@ export function displayListingsUnlogged(listings) {
     listingsContainer.innerHTML += card(listing);
   });
 }
+
 // refreshing loops for myself as I didn´t remember forEach and rewrote for loop into forEach :)
 
 // for (let i = 0; i < results.length; i++) {
