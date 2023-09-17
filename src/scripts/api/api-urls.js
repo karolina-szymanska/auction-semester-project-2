@@ -7,5 +7,5 @@ export const latestListings = `${api_base_url}/auction/listings?sort=created&sor
 // all active listings descending, including created by a registered user
 export const allActiveListingsDesc = `${api_base_url}/auction/listings?sort=created&sortOrder=desc&_active=true`;
 
-// all listings, no sorting
-export const allListings = `${api_base_url}/auction/listings`;
+// all active listings, no sort order, including created by a registered user
+export const allActiveListings = `${api_base_url}/auction/listings?sort=created&_active=true`;
