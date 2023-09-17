@@ -159,6 +159,7 @@ div.card img.card-img-center {
 div.card div.card-body > h5.card-title, div.card div.card-body > .card-title.h5 {
   color: #f63062;
   font-size: 1.15rem;
+  text-transform: capitalize;
 }
 
 div.carousel-inner div.carousel-caption {
@@ -204,7 +205,8 @@ div.container-footer2-background {
 }
 div.container-footer1-background p.p-heading,
 div.container-footer2-background p.p-heading {
-  font-weight: 700;
+  font-weight: bold !important;
+  font-size: 16px;
 }
 
 div.container-footer1-background {

@@ -15,5 +15,6 @@ div.card {
   div.card-body > h5.card-title {
     color: $colour-primary;
     font-size: 1.15rem;
+    text-transform: capitalize;
   }
 }
