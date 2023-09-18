@@ -13,6 +13,8 @@ export async function registerNewUser(registerUrl, newUserObject) {
       const errorMessage = document.querySelector("#error-message");
       errorMessage.computedStyleMap.display = "block";
       errorMessage.innerHTML = `${result.errors[0].message}`;
+    } else {
+      location.href = "/register-success.html";
     }
   } catch (error) {
     console.log(error);
