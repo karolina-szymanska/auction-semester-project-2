@@ -53,7 +53,8 @@ a {
 
 div.container-latest-auctions-background,
 div.container-how-it-works-background,
-div.container-all-auctions-background {
+div.container-all-auctions-background,
+div.register-form-container-background {
   background-color: #f5f5f5;
 }
 
@@ -228,7 +229,8 @@ div.container-footer2-background p.p-heading {
   margin-bottom: 0;
 }
 
-button.btn-register {
+button.btn-register,
+button.btn-register:hover {
   color: #f5f5f5;
 }
 
