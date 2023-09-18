@@ -1,37 +1,35 @@
-import { allActiveListings } from "../api/api-urls.js";
-import { displaySearchedListings } from "./displaySearchedListings.js";
 const searchInput = document.querySelector("#search-input");
 const statusContainer = document.querySelector("#status-container");
-const listingsContainer = document.querySelector("#listings-container");
+const latestHeading = document.querySelector("#latest-auctions-heading");
+const latestsButton = document.querySelector("#latest-auctions-button");
+import { displayListingsUnlogged } from "./displayListingsUnlogged.js";
 
-export async function searchListings(url) {
-  const results = await fetch(allActiveListings);
-  const allListings = await results.json();
-  //   console.log(allListings);
-
+export function searchListings(listings) {
   searchInput.addEventListener("input", (event) => {
-    // console.log(event);
-    // console.log(event.target.value);
+    const searchedValue = event.target.value.trim().toLowerCase();
+    // console.log(searchedValue);
 
-    listingsContainer.innerHTML = "";
-    let value = event.data.value;
-    let filteredArray = [];
-
-    for (let i = 0; i < allListings.length; i++) {
-      let currentPost = allListings[i];
-
+    const filteredListings = listings.filter(function (listing) {
       if (
-        currentPost.description.toLowerCase().includes(value.toLowerCase()) ||
-        currentPost.title.toLowerCase().includes(value.toLowerCase())
+        (listing.title &&
+          listing.title.toLowerCase().includes(searchedValue)) ||
+        (listing.description &&
+          listing.description.toLowerCase().includes(searchedValue))
       ) {
-        filteredArray.push(currentPost);
-        statusContainer.innerHTML = ``;
-      } else if (filteredArray.length === 0) {
-        statusContainer.innerHTML = `<p>It seems no item matches your search</p>`;
+        return true;
       }
+    });
+
+    if (filteredListings.length === 0) {
+      statusContainer.innerHTML = `<p>It seems no item matches your search</p>`;
+      latestHeading.style.display = "none";
+      latestsButton.style.display = "none";
+    } else if (filteredListings.length > 0) {
+      statusContainer.innerHTML = ``;
+      latestHeading.style.display = "none";
+      latestsButton.style.display = "inline-block";
     }
-    displaySearchedListings(filteredArray);
+
+    displayListingsUnlogged(filteredListings);
   });
 }
-
-searchListings(allActiveListings);

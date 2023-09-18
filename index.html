@@ -75,9 +75,6 @@
                 placeholder="Search item"
                 aria-label="Search"
               />
-              <button class="btn btn-outline-success" type="submit">
-                Search
-              </button>
             </form>
 
             <div class="container-buttons">
@@ -175,7 +172,9 @@
         <div class="container">
           <div class="row">
             <div class="col text-center">
-              <h2 class="section-heading">latest auctions</h2>
+              <h2 class="section-heading" id="latest-auctions-heading">
+                latest auctions
+              </h2>
               <div class="container-latest-auctions mb-3">
                 <div class="container text-center" id="status-container"></div>
                 <div class="row" id="listings-container">
@@ -191,6 +190,7 @@
               <a
                 href="./listings.html"
                 class="btn btn-primary btn-lg customised-btn"
+                id="latest-auctions-button"
                 >see all auctions</a
               >
             </div>
@@ -503,7 +503,7 @@
     ></script>
     <script
       type="module"
-      src="./src/scripts/index.page/index-api-call.js"
+      src="./src/scripts/index-page/index-api-call.js"
     ></script>
   </body>
 </html>
