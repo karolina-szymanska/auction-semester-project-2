@@ -8,8 +8,8 @@ async function getUnloggedListings(url1, url2) {
   try {
     const response = await fetch(url1);
     const latestListings = await response.json();
-    displayListingsUnlogged(latestListings);
     // console.log(latestListings);
+    displayListingsUnlogged(latestListings);
 
     const reply = await fetch(url2);
     const allListings = await reply.json();
@@ -21,12 +21,8 @@ async function getUnloggedListings(url1, url2) {
 
       if (inputsLength > 0) {
         displayListingsUnlogged(allListings);
-        // latestHeading.style.display = "none";
-        // latestsButton.style.display = "none";
       } else {
         displayListingsUnlogged(latestListings);
-        // latestHeading.style.display = "block";
-        // latestsButton.style.display = "inline-block";
       }
 
       searchListings(allListings);
