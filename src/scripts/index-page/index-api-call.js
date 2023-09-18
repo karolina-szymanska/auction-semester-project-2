@@ -1,10 +1,12 @@
-import { clearLocalStorage } from "../clear-Storage.js";
+import clearLocalStorage from "../components/clear-storage.js";
 clearLocalStorage();
 
-import { latestListings, allActiveListings } from "../api/api-urls.js";
+import { latestListingsUrl, allActiveListingsUrl } from "../api/api-urls.js";
 import { displayListingsUnlogged } from "../components/displayListingsUnlogged.js";
 import { searchListings } from "../components/search.js";
+import { errorHtml } from "../components/error.js";
 const searchInput = document.querySelector("#search-input");
+const listingsContainer = document.querySelector("#listings-container");
 
 async function getUnloggedListings(url1, url2) {
   try {
@@ -33,7 +35,10 @@ async function getUnloggedListings(url1, url2) {
     // displayListingsUnlogged(latestListings);
   } catch (error) {
     console.log(error);
+    listingsContainer.innerHTML = errorHtml(
+      "An error occured. Please wait a while and try again."
+    );
   }
 }
 
-getUnloggedListings(latestListings, allActiveListings);
+getUnloggedListings(latestListingsUrl, allActiveListingsUrl);
