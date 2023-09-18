@@ -1,8 +1,10 @@
-const searchInput = document.querySelector("#search-input");
+import { clearLocalStorage } from "../clear-Storage.js";
+clearLocalStorage();
 
 import { latestListings, allActiveListings } from "../api/api-urls.js";
 import { displayListingsUnlogged } from "../components/displayListingsUnlogged.js";
 import { searchListings } from "../components/search.js";
+const searchInput = document.querySelector("#search-input");
 
 async function getUnloggedListings(url1, url2) {
   try {
