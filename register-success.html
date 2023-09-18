@@ -143,7 +143,72 @@
 
     <main>
       <!-- LOGIN FORM -->
-      <div class="registration-success-container-background"></div>
+      <div class="registration-success-container-background">
+        <div class="container col-lg-4 col-sm-12 text-center pt-5 pb-5">
+          <h2 class="thank-you text-center pb-2">
+            Thank you for registering. Welcome!
+          </h2>
+          <img
+            src="./assets/logo/hammer.png"
+            alt="Auction logo"
+            height="50px"
+          />
+          <h1 class="register-heading text-center mb-4">Login</h1>
+          <div class="form-signin">
+            <form action="/signup-thank-you.html" id="login-form">
+              <!-- email -->
+              <div class="form-floating">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="form-control"
+                  placeholder="name@example.com"
+                  maxlength="100"
+                  pattern="^[\w\-.]+@stud.?noroff.no$"
+                  title="Enter a valid stud.noroff.no or noroff.no email address"
+                  required
+                />
+                <label for="email">Email</label>
+              </div>
+
+              <!-- password -->
+              <div class="form-floating">
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  class="form-control my-3"
+                  placeholder="Password"
+                  maxlength="20"
+                  minlength="8"
+                  pattern="^.(?=.{7,})(?=.[a-zA-Z]).*$"
+                  title="Password must be between 8 and 20 characters long"
+                  required
+                />
+                <label class="was-validated" for="password">Password</label>
+              </div>
+
+              <!-- login button -->
+              <button class="w-100 btn btn-lg btn-primary" type="submit">
+                <strong>Login</strong>
+              </button>
+              <br />
+              <br />
+
+              <!-- error message -->
+              <div class="checkbox mb-3" id="error-message-container">
+                <p id="error-message">Oops... Something went wrong!</p>
+              </div>
+
+              <!-- Click here to login -->
+              <div class="checkbox mb-3 login-link">
+                <a href="/signup.html">Create a new account!</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
 
       <!-- FOOTER 1 -->
       <div class="container-footer1-background pt-3 pb-5">
