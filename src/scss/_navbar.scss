@@ -6,12 +6,8 @@ nav.first-navbar {
     box-shadow: 0 0 0 0.25rem rgba(22, 175, 127, 0.25);
   }
 
-  button.btn-outline-success:hover {
-    color: $colour-white;
-  }
-
   div.container-buttons {
-    > button.btn-primary {
+    > a.btn-primary {
       color: $colour-white;
     }
   }
@@ -43,8 +39,12 @@ nav.first-navbar {
         > a.d-none.d-lg-inline-block.like {
           margin-right: 10px;
         }
-        > button.btn {
+        > a.btn {
           margin-left: 7px;
+        }
+
+        > a.btn-outline-primary:hover {
+          color: $colour-white;
         }
       }
     }
