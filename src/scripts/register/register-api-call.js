@@ -7,7 +7,13 @@ export async function registerNewUser(registerUrl, newUserObject) {
     registerUser.body = JSON.stringify(newUserObject);
     const response = await fetch(registerUserUrl, registerUser);
     const result = await response.json();
-    console.log(result);
+    // console.log(result);
+
+    if (response.status !== 201) {
+      const errorMessage = document.querySelector("#error-message");
+      errorMessage.computedStyleMap.display = "block";
+      errorMessage.innerHTML = `${result.errors[0].message}`;
+    }
   } catch (error) {
     console.log(error);
   }
