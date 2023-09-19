@@ -9,6 +9,22 @@ export async function loginAuthorizedUser(url, credentials) {
     loginUser.body = JSON.stringify(credentials);
     const response = await fetch(url, loginUser);
     const results = await response.json();
+
+    if (response.status !== 200) {
+      const errorMessage = document.querySelector("#error-message");
+      errorMessage.style.display = "block";
+      errorMessage.innerHTML = `${response.statusText}. Make sure you have registered <em>@stud.noroff.no</em> account and your password is 8-20 characters long.`;
+    } else {
+      // add data to local storage
+      localStorage.setItem("name", json.name);
+      localStorage.setItem("email", json.email);
+      localStorage.setItem("credits", json.credits);
+      localStorage.setItem("avatar", json.avatar);
+      localStorage.setItem("token", json.accessToken);
+
+      // direct to account page
+      location.href = "/account.html";
+    }
   } catch (error) {
     console.log(error);
   }
