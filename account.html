@@ -81,7 +81,7 @@
               </a>
               <a href="./register.html" class="btn btn-primary no-highlight"
                 >Credits |
-                <strong id="credits-container">&emsp;&emsp;</strong></a
+                <strong id="user-credits-container">&emsp;&emsp;</strong></a
               >
               <span>
                 <a href="/account.html">
@@ -159,6 +159,7 @@
                     <input
                       type="url"
                       name="avatar"
+                      class="d-none"
                       id="avatar-media"
                       class="form-control"
                       placeholder="Avatar media URL"
@@ -185,6 +186,7 @@
                     class="btn btn-small btn-primary text-white"
                     type="submit"
                     id="send-avatar-button"
+                    class="d-none"
                   >
                     Send
                   </button>
@@ -405,19 +407,19 @@
     ></script>
     <script
       type="module"
-      src="/src/scripts/navbar-logged-in/navbar-credits-avatar.mjs"
+      src="/src/scripts/navbar-logged-in/navbar-credits-avatar.js"
     ></script>
     <script
       type="module"
-      src="/src/scripts/my-account-page/display-profile-info.mjs"
+      src="/src/scripts/account-page/display-profile-info.js"
     ></script>
     <script
       type="module"
-      src="/src/scripts/my-account-page/change-avatar.mjs"
+      src="/src/scripts/account-page/change-avatar.js"
     ></script>
     <script
       type="module"
-      src="/src/scripts/my-account-page/get-my-listings-api-call.mjs"
+      src="/src/scripts/account-page/get-my-listings-api-call.js"
     ></script>
   </body>
 </html>
