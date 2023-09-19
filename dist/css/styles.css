@@ -55,12 +55,14 @@ div.container-latest-auctions-background,
 div.container-how-it-works-background,
 div.container-all-auctions-background,
 div.register-form-container-background,
-div.registration-success-container-background {
+div.registration-success-container-background,
+div.container-my-auctions-background {
   background-color: #f5f5f5;
 }
 
 div.container-carousel-background,
-div.container-brands-background {
+div.container-brands-background,
+div.container-my-account-background {
   background-color: #eaecf3;
 }
 
@@ -211,6 +213,18 @@ a.register {
 
 h2.thank-you, .thank-you.h2 {
   text-transform: none;
+}
+
+div.container-my-account-background h1.h1-account, div.container-my-account-background .h1-account.h1 {
+  text-transform: capitalize;
+}
+div.container-my-account-background div.user-avatar-container {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background-image: url("../../assets/placeholders/avatar.png");
+  background-size: cover;
+  border: 1px solid #4e4f53;
 }
 
 /*!
