@@ -1,6 +1,6 @@
 const searchInput = document.querySelector("#search-input");
 const statusContainer = document.querySelector("#status-container");
-import { displayListingsUnlogged } from "./displayListingsUnlogged.js";
+import { displayListingsUnlogged } from "./display-listings-unlogged.js";
 
 export function searchListings(listings) {
   searchInput.addEventListener("input", (event) => {
