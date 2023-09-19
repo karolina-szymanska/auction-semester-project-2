@@ -1,7 +1,5 @@
 const searchInput = document.querySelector("#search-input");
 const statusContainer = document.querySelector("#status-container");
-const latestHeading = document.querySelector("#latest-auctions-heading");
-const latestsButton = document.querySelector("#latest-auctions-button");
 import { displayListingsUnlogged } from "./displayListingsUnlogged.js";
 
 export function searchListings(listings) {
@@ -22,12 +20,8 @@ export function searchListings(listings) {
 
     if (filteredListings.length === 0) {
       statusContainer.innerHTML = `<p>It seems no item matches your search</p>`;
-      latestHeading.style.display = "none";
-      latestsButton.style.display = "none";
     } else if (filteredListings.length > 0) {
       statusContainer.innerHTML = ``;
-      latestHeading.style.display = "none";
-      latestsButton.style.display = "inline-block";
     }
 
     displayListingsUnlogged(filteredListings);

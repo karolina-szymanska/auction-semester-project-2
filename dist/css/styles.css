@@ -164,42 +164,6 @@ div.card div.card-body > h5.card-title, div.card div.card-body > .card-title.h5 
   text-transform: capitalize;
 }
 
-div.carousel-inner div.carousel-caption {
-  background-color: #2a292e;
-  opacity: 0.85;
-  border-radius: 5px;
-}
-
-div.instruction {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-div.instruction > div.circle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 80px;
-  height: 80px;
-  border: 3px solid rgba(78, 79, 83, 0.1);
-  border-radius: 50%;
-}
-div.instruction > div.circle > h3, div.instruction > div.circle > .h3 {
-  color: #f63062;
-  font-size: 30px;
-  font-weight: 300;
-  margin-bottom: 0;
-}
-div.instruction > h3.instruction-heading, div.instruction > .instruction-heading.h3 {
-  text-decoration: underline solid 2px rgba(246, 48, 98, 0.6);
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
-}
-div.instruction p {
-  font-style: italic;
-  width: 150px;
-}
-
 div.container-footer1-background,
 div.container-footer2-background {
   font-size: 14px;
