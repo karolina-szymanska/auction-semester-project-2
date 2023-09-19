@@ -1,7 +1,7 @@
 import { clearLocalStorage } from "../components/clear-storage.js";
 clearLocalStorage();
 
-import { loginUserUrl } from "../api//api-urls.js";
+import { loginUserUrl } from "../api/api-urls.js";
 import { loginAuthorizedUser } from "./login-api-call.js";
 
 const loginForm = document.querySelector("#login-form");
