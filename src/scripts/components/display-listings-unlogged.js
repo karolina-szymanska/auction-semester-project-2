@@ -1,4 +1,4 @@
-import card from "./cardUnregistered.js";
+import card from "./card-unregistered.js";
 
 export function displayListingsUnlogged(listings) {
   const listingsContainer = document.querySelector("#listings-container");
