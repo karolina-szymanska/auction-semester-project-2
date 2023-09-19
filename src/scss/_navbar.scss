@@ -11,6 +11,11 @@ nav.first-navbar {
       color: $colour-white;
     }
   }
+
+  a.no-highlight:hover {
+    background-color: $colour-primary !important;
+    cursor: default;
+  }
 }
 
 @media (max-width: 991px) {
@@ -33,13 +38,8 @@ nav.first-navbar {
       }
 
       > div.container-buttons {
-        > a.d-none.d-lg-inline-block {
-          margin: 0 5px;
-        }
-        > a.d-none.d-lg-inline-block.like {
-          margin-right: 10px;
-        }
-        > a.btn {
+        > a.btn,
+        img.avatar-nav {
           margin-left: 7px;
         }
 

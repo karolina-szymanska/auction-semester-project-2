@@ -82,6 +82,10 @@ nav.first-navbar input.form-control:focus {
 nav.first-navbar div.container-buttons > a.btn-primary {
   color: #f5f5f5;
 }
+nav.first-navbar a.no-highlight:hover {
+  background-color: #f63062 !important;
+  cursor: default;
+}
 
 @media (max-width: 991px) {
   nav.first-navbar div.navbar-collapse > div.container-buttons {
@@ -97,13 +101,8 @@ nav.first-navbar div.container-buttons > a.btn-primary {
     position: absolute;
     right: 50%;
   }
-  nav.first-navbar div.navbar-collapse > div.container-buttons > a.d-none.d-lg-inline-block {
-    margin: 0 5px;
-  }
-  nav.first-navbar div.navbar-collapse > div.container-buttons > a.d-none.d-lg-inline-block.like {
-    margin-right: 10px;
-  }
-  nav.first-navbar div.navbar-collapse > div.container-buttons > a.btn {
+  nav.first-navbar div.navbar-collapse > div.container-buttons > a.btn,
+  nav.first-navbar div.navbar-collapse > div.container-buttons img.avatar-nav {
     margin-left: 7px;
   }
   nav.first-navbar div.navbar-collapse > div.container-buttons > a.btn-outline-primary:hover {
@@ -145,6 +144,12 @@ div.jumbotron > div.jumbotron-text > h1.jumbotron-h1, div.jumbotron > div.jumbot
 div.jumbotron > div.jumbotron-text > h3.jumbotron-h3, div.jumbotron > div.jumbotron-text > .jumbotron-h3.h3 {
   font-size: 1.6rem;
   font-weight: 300;
+}
+
+div.carousel-inner div.carousel-caption {
+  background-color: #2a292e;
+  opacity: 0.85;
+  border-radius: 5px;
 }
 
 div.card > div.card-header {
