@@ -1,10 +1,10 @@
 import { clearLocalStorage } from "../components/clear-storage.js";
 clearLocalStorage();
 
-import { registerNewUser } from "./register-api-call.js";
 import { registerUserUrl } from "../api/api-urls.js";
+import { registerNewUser } from "./register-api-call.js";
 
-const registerForm = document.querySelector("#registerform");
+const registerForm = document.querySelector("#register-form");
 // console.log(registerForm);
 
 registerForm.addEventListener("submit", (event) => {
