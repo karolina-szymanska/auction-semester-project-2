@@ -2,7 +2,8 @@ button.btn-register,
 button.btn-register:hover {
   color: $colour-white;
 }
-a.login {
+a.login,
+a.register {
   text-decoration: underline !important;
 }
 

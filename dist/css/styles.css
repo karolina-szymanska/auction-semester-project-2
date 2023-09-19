@@ -199,7 +199,8 @@ button.btn-register:hover {
   color: #f5f5f5;
 }
 
-a.login {
+a.login,
+a.register {
   text-decoration: underline !important;
 }
 
