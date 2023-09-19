@@ -8,7 +8,7 @@ export async function loginAuthorizedUser(url, credentials) {
   try {
     loginUser.body = JSON.stringify(credentials);
     const response = await fetch(url, loginUser);
-    const results = await response.json();
+    const json = await response.json();
 
     if (response.status !== 200) {
       const errorMessage = document.querySelector("#error-message");
