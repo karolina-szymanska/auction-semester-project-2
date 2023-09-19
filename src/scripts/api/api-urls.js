@@ -27,3 +27,31 @@ export function getProfileUrl(name) {
 export function getListingsByProfileUrl(name) {
   return `${api_base_url}/auction/profiles/${name}/listings?_seller=true&_bids=true&sort=created&sortOrder=desc&_active=true`;
 }
+
+// single listing
+export function getListingUrl(listingID) {
+  return `${api_base_url}/auction/listings/${listingID}?_seller=true&_bids=true`;
+}
+
+// create entry
+export const createEntryUrl = `${api_base_url}/auction/listings`;
+
+// update entry
+export function updateEntryUrl(itemID) {
+  return `${api_base_url}/auction/listings/${itemID}`;
+}
+
+// delete entry
+export function deleteEntryUrl(itemID) {
+  return `${api_base_url}/auction/listings/${itemID}`;
+}
+
+// get all listings by profile
+export function getListingsByProfileUrl(name) {
+  return `${api_base_url}/auction/profiles/${name}/listings?_seller=true&_bids=true&sort=created&sortOrder=desc&_active=true`;
+}
+
+// send bid
+export function sendBidUrl(listingID) {
+  return `${api_base_url}/auction/listings/${listingID}/bids`;
+}
