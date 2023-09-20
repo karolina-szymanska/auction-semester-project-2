@@ -6,9 +6,9 @@ sendAvatarUrl(userName);
 const changeAvatarForm = document.querySelector("#form-change-avatar");
 const avatarUrlInput = document.querySelector("#avatar-media");
 const changeAvatarButton = document.querySelector("#change-avatar-button");
-const sendAvatarButton = docu.querySelector("#send-avatar-button");
+const sendAvatarButton = document.querySelector("#send-avatar-button");
 
-changeAvatarButton.computedStyleMap.display = "inline-block";
+changeAvatarButton.style.display = "inline-block";
 
 changeAvatarButton.addEventListener("click", (showAvatarInput) => {
   changeAvatarButton.style.display = "none";

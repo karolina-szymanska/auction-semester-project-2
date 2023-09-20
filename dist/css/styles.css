@@ -56,7 +56,8 @@ div.container-how-it-works-background,
 div.container-all-auctions-background,
 div.register-form-container-background,
 div.registration-success-container-background,
-div.container-my-auctions-background {
+div.container-my-auctions-background,
+div.login-form-container-background {
   background-color: #f5f5f5;
 }
 

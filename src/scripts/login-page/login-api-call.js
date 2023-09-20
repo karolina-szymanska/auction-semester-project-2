@@ -15,6 +15,7 @@ export async function loginAuthorizedUser(url, credentials) {
       errorMessage.style.display = "block";
       errorMessage.innerHTML = `${response.statusText}. Make sure you have registered <em>@stud.noroff.no</em> account and your password is 8-20 characters long.`;
     } else {
+      errorMessage.style.display = "none";
       // add data to local storage
       localStorage.setItem("name", json.name);
       localStorage.setItem("email", json.email);
@@ -22,7 +23,6 @@ export async function loginAuthorizedUser(url, credentials) {
       localStorage.setItem("avatar", json.avatar);
       localStorage.setItem("token", json.accessToken);
 
-      // direct to account page
       location.href = "/account.html";
     }
   } catch (error) {

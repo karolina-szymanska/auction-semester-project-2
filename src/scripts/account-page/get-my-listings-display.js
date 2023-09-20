@@ -37,8 +37,6 @@ export function displayMyListings(myListings) {
                       <a href="/item.html?id=${myListings[i].id}"><button class="btn btn-primary px-4 mb-2"><strong>Open</strong></button></a>
                       </div>
                   </div>
-                  </div>
-          
-          `;
+                  </div>`;
   }
 }

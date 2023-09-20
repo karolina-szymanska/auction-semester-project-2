@@ -1,6 +1,6 @@
 import { displayMyListings } from "./get-my-listings-display.js";
-
 import { getListingsByProfileUrl } from "../api/api-base-urls.js";
+
 const userName = localStorage.getItem("name");
 const myListingsURL = getListingsByProfileUrl(userName);
 
@@ -9,7 +9,7 @@ const { getListings } = fetchMetdhods;
 
 async function getMyListings() {
   try {
-    const response = await fetch(myListingsUrl, getListings);
+    const response = await fetch(myListingsURL, getListings);
     const json = await response.json();
     displayMyListings(json);
   } catch (error) {

@@ -29,7 +29,7 @@ showUserInfo();
 
 function redirectIfLoggedOut() {
   if (!userName) {
-    location.href = "/.index.html";
+    location.href = "/index.html";
   }
 }
 

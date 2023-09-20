@@ -1,8 +1,8 @@
 // base url
 export const api_base_url = `https://api.noroff.dev/api/v1`;
 
-// all active listings descending, including created by a registered user
-export const allActiveListingsDescUrl = `${api_base_url}/auction/listings?sort=created&sortOrder=desc&_active=true`;
+// all active listings descending
+export const allActiveListingsDescUrl = `${api_base_url}/auction/listings?_seller=true&_bids=true&sort=created&sortOrder=desc&_active=true`;
 
 // all active listings, no sort order, including created by a registered user
 export const allActiveListingsUrl = `${api_base_url}/auction/listings?sort=created&_active=true`;
@@ -44,11 +44,6 @@ export function updateEntryUrl(itemID) {
 // delete entry
 export function deleteEntryUrl(itemID) {
   return `${api_base_url}/auction/listings/${itemID}`;
-}
-
-// get all listings by profile
-export function getListingsByProfileUrl(name) {
-  return `${api_base_url}/auction/profiles/${name}/listings?_seller=true&_bids=true&sort=created&sortOrder=desc&_active=true`;
 }
 
 // send bid
