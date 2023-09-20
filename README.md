@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# Auction - Semester Project 2
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Noroff, School of Technology and Digital Media
 
-## Available Scripts
+## Project Brief
 
-In the project directory, you can run:
+An auction site is looking to launch a website where users can add items to be bid on and bid on items other users have put up for auction.
 
-### `npm start`
+When a new user joins the website, they are given 1000 credits to use on the site. They can get credits by selling items and use credit by buying items. Non-registered users can search through the listings, but only registered users can make bids on listings.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### User Stories
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- [x] The client has specified the following requirements in the form of User Stories:
+- [x] A user with a stud.noroff.no email may register
+- [x] A registered user may login
+- [x] A registered user may logout
+- [x] A registered user may update their avatar
+- [x] A registered user may view their total credit
+- [x] A registered user may create a Listing with a title, deadline date, media gallery and description
+- [x] A registered user may add a Bid to another user’s Listing
+- [x] A registered user may view Bids made on a Listing
+- [x] A registered user may use credit to make a Bid on another user’s Listing
+- [x] An unregistered user may search through Listings
 
-### `npm test`
+### Technical restrictions
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The company CTO has set the following technical restrictions:
 
-### `npm run build`
+1. Must use an approved CSS Framework
+1. Must be hosted on an approved Static Host
+1. Must use an approved Design Application
+1. Must use an approved Planning Application
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Built with
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- HTML
+- Bootstrap
+- SASS
+- Vanilla Javascript
+- [Noroff API](https://docs.noroff.dev/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<div>
+  <img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-original.svg" title="HTML5" alt="HTML" width="40" height="40"/>&nbsp;
+  <img src="https://github.com/devicons/devicon/blob/master/icons/bootstrap/bootstrap-original.svg" title="Bootstrap5" alt="Bootstrap5" width="40" height="40"/>&nbsp;
+  <img src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg" title="JavaScript" alt="JavaScript" width="40" height="40"/>&nbsp;
+</div>
 
-### `npm run eject`
+## Dependencies
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Bootstrap 5.2.3
+- SASS 1.67.0
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Local Development
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- `npm install`: starts node and installs dependencies
+- `npm build`: compiles CSS
+- `npm watch`: compiles src/scss/style.scss to dist/css/style.css
