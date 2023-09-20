@@ -1,26 +1,21 @@
-import clearLocalStorage from "../components/clear-storage.js";
+import { clearLocalStorage } from "../clear-local-storage.js";
 clearLocalStorage();
 
-import { allActiveListingsDescUrl } from "../api/api-urls.js";
-import { displayListingsUnlogged } from "../components/display-listings-unlogged.js";
-import { searchListings } from "../components/search.js";
-import { errorHtml } from "../components/error.js";
-const listingsContainer = document.querySelector("#listings-container");
+import { allListingsDESC } from "../api/api-base-urls.js";
+import { displayListingsLoggedOut } from "./display-listings-logged-out.js";
+import { searchListings } from "./search-bar.js";
+import { clearSearchField } from "./search-bar.js";
 
-async function getUnloggedListings(url) {
+export async function fetchListingsLoggedOut(url) {
   try {
     const response = await fetch(url);
-    const allActiveListings = await response.json();
-    // console.log(allActiveListings);
+    const allListings = await response.json();
 
-    displayListingsUnlogged(allActiveListings);
-    searchListings(allActiveListings);
+    displayListingsLoggedOut(allListings);
+    searchListings(allListings);
+    clearSearchField(allListings);
   } catch (error) {
     console.log(error);
-    listingsContainer.innerHTML = errorHtml(
-      "An error occured. Please wait a while and try again."
-    );
   }
 }
-
-getUnloggedListings(allActiveListingsDescUrl);
+fetchListingsLoggedOut(allListingsDESC);

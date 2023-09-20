@@ -7,28 +7,24 @@ function loadUserAvatar() {
     avatarNavURLContainer.src = "/assets/placeholders/avatar.png";
   }
 }
-
 loadUserAvatar();
 
-import { getProfileUrl } from "../api/api-urls.js";
-import { fetchMethods } from "../api/fetch-methods.js";
-
+import { getProfileURL } from "../api/api-base-urls.js";
+import { fetchMetdhods } from "../api/fetch-methods.js";
 export async function loadUserCredits() {
   try {
     const userName = localStorage.getItem("name");
-    const { getProfile } = fetchMethods;
-    const response = await fetch(getProfileUrl(userName), getProfile);
+    const { getProfile } = fetchMetdhods;
+    const response = await fetch(getProfileURL(userName), getProfile);
     const json = await response.json();
     const userCreditsContainer = document.querySelector(
       "#user-credits-container"
     );
     userCreditsContainer.innerHTML = `${json.credits}`;
-
-    // credits to localStorage
+    // send credits to localStorage
     localStorage.setItem("credits", json.credits);
   } catch (error) {
     console.log(error);
   }
 }
-
 loadUserCredits();

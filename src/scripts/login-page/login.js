@@ -1,18 +1,20 @@
-import { clearLocalStorage } from "../components/clear-storage.js";
+import { clearLocalStorage } from "../clear-local-storage.js";
 clearLocalStorage();
 
-import { loginUserUrl } from "../api/api-urls.js";
-import { loginAuthorizedUser } from "./login-api-call.js";
+import { loginAuthUser } from "./login-api-call.js";
+import { loginUserURL } from "../api/api-base-urls.js";
 
 const loginForm = document.querySelector("#login-form");
+const errorMessage = document.querySelector("#error-message");
+errorMessage.style.display = "none";
 
 loginForm.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  // create user object
+  // Creates user object
   const myFormData = new FormData(event.target);
   const userToLoginObject = Object.fromEntries(myFormData.entries());
 
-  // logs in to api
-  loginAuthorizedUser(loginUserUrl, userToLoginObject);
+  // Logs in user in API
+  loginAuthUser(loginUserURL, userToLoginObject);
 });

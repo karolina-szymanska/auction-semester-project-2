@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Auction | Home & Sign up" />
+    <meta name="description" content="Auction | Edit item" />
     <!-- CSS only -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
@@ -26,13 +26,22 @@
     ></script>
     <script
       type="module"
-      src="/src/scripts/home-page/home-api-call.js"
+      src="/src/scripts/item-edit-page/edit-item-api-call-fetch.js"
     ></script>
-    <script type="module" src="/src/scripts/home-page/greeting.js"></script>
-    <script type="module" src="/src/scripts/home-page/filters-home.js"></script>
-    <script type="module" src="/src/scripts/home-page/search-bar.js"></script>
+    <script
+      type="module"
+      src="/src/scripts/item-edit-page/edit-item-prefill-form.js"
+    ></script>
+    <script
+      type="module"
+      src="/src/scripts/item-edit-page/edit-item-api-call-send.js"
+    ></script>
+    <script
+      type="module"
+      src="/src/scripts/item-edit-page/delete-item-button.js"
+    ></script>
 
-    <title>Home | Auction</title>
+    <title>Edit item | Auction</title>
   </head>
   <body>
     <!-- NAVIGATION -->
@@ -81,121 +90,180 @@
                 id="avatar-nav"
             /></a>
           </span>
+          <hr />
         </div>
       </div>
     </nav>
 
-    <div style="min-height: 80vh; max-width: 1600px; margin: auto">
+    <div style="min-height: 80vh">
       <!-- HEADER -->
-      <section
-        class="container-fluid text-start px-5 my-5"
-        id="greeting-container"
-      ></section>
+      <section class="container px-5 m-5 col-lg-6 m-auto">
+        <h1 class="text-center mt-5 mb-0">Edit item</h1>
+      </section>
 
-      <!-- EDITOR'S PICKS -->
-      <div class="container my-5">
-        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-indicators">
-            <button
-              type="button"
-              data-bs-target="#myCarousel"
-              data-bs-slide-to="0"
-              class=""
-              aria-label="Slide 1"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#myCarousel"
-              data-bs-slide-to="1"
-              aria-label="Slide 2"
-              class="active"
-              aria-current="true"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#myCarousel"
-              data-bs-slide-to="2"
-              aria-label="Slide 3"
-              class=""
-            ></button>
+      <!-- ADD ITEM  -->
+      <div class="container px-4 py-5 col-lg-5 col-sm-12">
+        <form id="update-item-form">
+          <!-- title -->
+          <div class="">
+            <input
+              type="text"
+              name="title"
+              id="title"
+              class="form-control"
+              placeholder="Item asdasdas das da name"
+              maxlength="300"
+              title="Please add a title to your post"
+            />
+            <label class="was-validated" for="title" style="visibility: hidden"
+              >Title</label
+            >
           </div>
 
-          <div class="carousel-inner" id="editors-choices-slider"></div>
-
-          <button
-            class="carousel-control-prev"
-            type="button"
-            data-bs-target="#myCarousel"
-            data-bs-slide="prev"
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button
-            class="carousel-control-next"
-            type="button"
-            data-bs-target="#myCarousel"
-            data-bs-slide="next"
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-      </div>
-
-      <!-- MAIN CONTENT -->
-      <section class="px-5">
-        <hr />
-        <!-- filters and search bar -->
-        <div class="row mb-4">
-          <div class="col">
-            <h2>Active listings</h2>
+          <!-- description -->
+          <div class="">
+            <textarea
+              name="description"
+              id="description"
+              class="form-control"
+              placeholder="Item description"
+              maxlength="280"
+              rows="5"
+            ></textarea>
+            <label
+              class="was-validated"
+              for="description"
+              style="visibility: hidden"
+              >Description</label
+            >
           </div>
-          <div class="col mb-4 text-center">
-            <div class="btn-group" role="group" aria-label="Basic example">
-              <button
-                type="button"
-                class="btn btn-info active"
-                id="newest-first-button"
-              >
-                Newest first
-              </button>
-              <button
-                type="button"
-                class="btn btn-info"
-                id="oldest-first-button"
-              >
-                Oldest first
-              </button>
+
+          <!-- ends at -->
+          <div class="mb-0">
+            <hr class="mb-1 text-primary" />
+            <p class="text-muted">
+              <strong>Date and time can't be changed</strong>
+            </p>
+            <div class="row">
+              <div class="col">
+                <input
+                  type="date"
+                  name="date"
+                  id="date"
+                  class="form-control"
+                  title="Bid deadline"
+                  disabled
+                />
+                <label
+                  class="was-validated"
+                  for="date"
+                  style="visibility: hidden"
+                  >Date</label
+                >
+              </div>
+              <div class="col">
+                <input
+                  type="time"
+                  name="time"
+                  id="time"
+                  class="form-control"
+                  title="Time"
+                  disabled
+                />
+                <label
+                  class="was-validated"
+                  for="time"
+                  style="visibility: hidden"
+                  >Time</label
+                >
+              </div>
             </div>
           </div>
-          <div class="col" style="min-width: 250px">
-            <form class="d-flex" role="search">
-              <input
-                class="form-control me-2"
-                type="text"
-                placeholder="Search..."
-                aria-label="Search"
-                id="search-input"
-              />
-              <button
-                class="btn btn-outline-primary"
-                type="button"
-                id="search-clear-button"
-              >
-                Clear
-              </button>
-            </form>
-          </div>
-        </div>
 
-        <!-- listings container -->
-        <div class="text-center my-5" id="status-container"></div>
-        <div
-          class="row row-cols-1 row-cols-md-3 g-3"
-          id="listingsContainer"
-        ></div>
-      </section>
+          <!-- image url -->
+          <div class="mb-0">
+            <hr class="mb-1 text-primary" />
+            <p class="text-muted">
+              <strong>Image gallery: please add 3 images</strong>
+            </p>
+            <input
+              type="url"
+              name="media1"
+              id="media1"
+              class="form-control"
+              placeholder="Image URL 1"
+              maxlength="1000"
+              title="Example: https://upload.wikimedia.org/wikipedia/commons/1/13/Red_Knot_1_-_Boat_Harbour.jpg"
+              required
+            />
+            <label class="was-validated" for="media1" style="visibility: hidden"
+              >Media 1</label
+            >
+          </div>
+
+          <div class="mb-0">
+            <input
+              type="url"
+              name="media2"
+              id="media2"
+              class="form-control"
+              placeholder="Image URL 2"
+              maxlength="1000"
+              title="Example: https://upload.wikimedia.org/wikipedia/commons/1/13/Red_Knot_1_-_Boat_Harbour.jpg"
+              required
+            />
+            <label class="was-validated" for="media2" style="visibility: hidden"
+              >Media 2</label
+            >
+          </div>
+
+          <div class="mb-0">
+            <input
+              type="url"
+              name="media3"
+              id="media3"
+              class="form-control"
+              placeholder="Image URL 3"
+              maxlength="1000"
+              title="Example: https://upload.wikimedia.org/wikipedia/commons/1/13/Red_Knot_1_-_Boat_Harbour.jpg"
+              required
+            />
+            <label class="was-validated" for="media3" style="visibility: hidden"
+              >Media 3</label
+            >
+          </div>
+
+          <!-- button -->
+          <button
+            type="submit"
+            class="w-100 btn btn-lg btn-primary text-white"
+            id="update-item-button"
+          >
+            <strong>Update</strong>
+          </button>
+          <br />
+          <br />
+          <p class="text-center" id="error-message">Error message</p>
+          <hr class="mt-4" />
+          <a class="text-decoration-none" style="cursor: pointer"
+            ><p class="text-center" id="delete-item-link">Delete item?</p></a
+          >
+          <button
+            type="button"
+            class="w-100 btn btn-sm btn-dark text-white mt-3"
+            id="delete-item-button"
+          >
+            <strong>Yes, delete</strong>
+          </button>
+          <button
+            type="button"
+            class="w-100 btn btn-sm btn-light text-dark mt-3"
+            id="cancel-button"
+          >
+            <strong>Cancel</strong>
+          </button>
+        </form>
+      </div>
     </div>
     <!-- FOOTER -->
     <footer class="text-center text-lg-start text-dark bg-dark mt-5 py-3">

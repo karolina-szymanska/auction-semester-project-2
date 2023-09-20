@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Auction | Login" />
+    <meta name="description" content="Auction | Sign up" />
     <!-- CSS only -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
@@ -19,10 +19,10 @@
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
       crossorigin="anonymous"
     ></script>
-    <script type="module" src="/src/scripts/login-page/login.js"></script>
-    <title>Login | Auction</title>
+    <script type="module" src="/src/scripts/sign-up-page/signup.js"></script>
+    <title>Sign up | Auction</title>
   </head>
-  <body>
+  <body class="d-flex flex-column h-100">
     <!-- NAVIGATION -->
     <nav class="navbar sticky-top navbar-expand-lg bg-light">
       <div class="container-fluid text-center">
@@ -43,11 +43,11 @@
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="#">Login</a>
+              <a class="nav-link" href="/login.html">Login</a>
             </li>
           </ul>
           <span class="navbar-text ms-4">
-            <a href="/signup.html" class="btn btn-primary ml-5 text-light"
+            <a href="#" class="btn btn-primary ml-5 text-light"
               ><strong>Sign up</strong></a
             >
           </span>
@@ -66,12 +66,28 @@
         />
       </div>
 
-      <!-- LOGIN FORM -->
+      <!-- SIGN UP FORM -->
       <section>
         <div class="container px-4 py-1 col-lg-4 col-sm-12 text-center">
-          <h1 class="text-center mt-4 mb-4">Login</h1>
+          <h1 class="text-center mt-4 mb-4">Sign up</h1>
           <div class="form-signin">
-            <form action="/signup-thank-you.html" id="login-form">
+            <form action="/signup-thank-you.html" id="signupform">
+              <!-- name -->
+              <div class="form-floating mb-4">
+                <input
+                  type="text"
+                  name="name"
+                  id="username"
+                  class="form-control"
+                  placeholder="Ola Nordmann"
+                  maxlength="20"
+                  pattern="^[\w]+$"
+                  title="Username must not contain punctuation symbols apart from underscore"
+                  required
+                />
+                <label for="username">Username</label>
+              </div>
+
               <!-- email -->
               <div class="form-floating">
                 <input
@@ -82,12 +98,12 @@
                   placeholder="name@example.com"
                   maxlength="100"
                   pattern="^[\w\-.]+@stud.?noroff.no$"
-                  title="Enter a valid stud.noroff.no or noroff.no email address"
-                  value="mozart@stud.noroff.no"
+                  title="Enter a valid @stud.noroff.no email address"
                   required
                 />
                 <label for="email">Email</label>
               </div>
+
               <!-- password -->
               <div class="form-floating">
                 <input
@@ -100,26 +116,26 @@
                   minlength="8"
                   pattern="^.(?=.{7,})(?=.[a-zA-Z]).*$"
                   title="Password must be between 8 and 20 characters long"
-                  value="abc123abc123"
                   required
                 />
                 <label class="was-validated" for="password">Password</label>
               </div>
-              <!-- login button -->
+
+              <!-- signup button -->
               <button class="w-100 btn btn-lg btn-primary" type="submit">
-                <strong>Login</strong>
+                <strong>Register</strong>
               </button>
               <br />
               <br />
-              <!-- error message -->
+
+              <!-- Error message -->
               <div class="checkbox mb-3" id="error-message-container">
-                <p id="error-message">Oops... Something went wrong!</p>
+                <p id="error-message">An error has occurred</p>
               </div>
+
               <!-- Click here to login -->
               <div class="checkbox mb-3 login-link">
-                <label>
-                  <a href="/signup.html">Create a new account!</a>
-                </label>
+                <a href="/login.html">Click here to login!</a>
               </div>
             </form>
           </div>

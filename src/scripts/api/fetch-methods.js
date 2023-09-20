@@ -1,5 +1,4 @@
 const token = localStorage.getItem("token");
-
 export const fetchMetdhods = {
   registerUser: {
     method: "POST",
