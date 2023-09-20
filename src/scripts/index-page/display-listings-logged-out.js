@@ -4,12 +4,11 @@ export function displayListingsLoggedOut(allListings) {
 
   for (let i = 0; i < allListings.length; i++) {
     if (allListings[i].media.length === 0) {
-      allListings[i].media = ["/assets/sample-image.png"];
+      allListings[i].media = ["/assets/placeholders/placeholder.jpg"];
     }
 
     if (!allListings[i].description) {
-      allListings[i].description =
-        "Check out this item and place your bid before you regret it!";
+      allListings[i].description = "Wonderful item";
     }
 
     const formattedCreatedDate = new Date(
