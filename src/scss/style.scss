@@ -1,0 +1,11 @@
+/* Bootstrap´s customised styles imports */
+@import "variables";
+@import "typography";
+@import "navbar";
+@import "layout";
+@import "banner";
+@import "card";
+@import "ui";
+
+/* Bootstrap default styles */
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";

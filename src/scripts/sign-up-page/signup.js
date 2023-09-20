@@ -1,8 +1,8 @@
-import { clearLocalStorage } from "../clear-local-storage.mjs";
+import { clearLocalStorage } from "../clear-local-storage.js";
 clearLocalStorage();
 
-import { registerNewUser } from "./signup-api-call.mjs";
-import { registerUserURL } from "../api/api-base-urls.mjs";
+import { registerNewUser } from "./signup-api-call.js";
+import { registerUserURL } from "../api/api-base-urls.js";
 
 const signUpForm = document.querySelector("#signupform");
 const errorMessage = document.querySelector("#error-message");

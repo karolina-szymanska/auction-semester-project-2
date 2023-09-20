@@ -1,5 +1,5 @@
-import { registerUserURL } from "../api/api-base-urls.mjs";
-import { fetchMetdhods } from "../api/fetch-methods.mjs";
+import { registerUserURL } from "../api/api-base-urls.js";
+import { fetchMetdhods } from "../api/fetch-methods.js";
 const { registerUser } = fetchMetdhods;
 
 export async function registerNewUser(registerURL, newUserObject) {

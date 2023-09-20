@@ -1,0 +1,21 @@
+$primary: #16af7f;
+$secondary: #f63062;
+$tertiary: #676767;
+$white: #f5f5f5;
+$light: #eaecf3;
+$info: #e0e0e0;
+$dark: #2a292e;
+
+/* BREAKPOINTS */
+$grid-breakpoints: (
+  xs: 0,
+  sm: 574px,
+  md: 766px,
+  lg: 990px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+/* SPACERS */
+
+$spacer: 1.2rem;
