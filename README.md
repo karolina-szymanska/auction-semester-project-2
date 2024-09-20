@@ -42,6 +42,7 @@ The client has specified the following requirements in the form of User Stories:
 ## API
 
 API Documentation: https://docs.noroff.dev/docs/v2/auction-house/listings
+
 API Swagger: https://v2.api.noroff.dev/docs/static/index.html
 
 ## Getting Started
